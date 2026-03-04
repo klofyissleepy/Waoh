@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For my LOVE!</title>
+ <link rel="icon" type="image/png" href="heart.jpeg">
+
+<style>
+  body {
+    text-align: center;
+    margin: 0;
+    font-family: "Lucida Handwriting", cursive;
+    background: linear-gradient(180deg, #ffd6dc, #ffe4ec, #fff0f8);
+    background-size: 100% 300%; /* IMPORTANT FIX */
+    animation: dreamyGradient 12s ease-in-out infinite;
+    overflow-x: hidden;
+  }
+
+  /* FIXED GRADIENT ANIMATION (Vertical Only) */
+  @keyframes dreamyGradient {
+    0% { background-position: 50% 0%; }
+    50% { background-position: 50% 100%; }
+    100% { background-position: 50% 0%; }
+  }
+
+  /* Sparkles */
+  .sparkle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 3s infinite ease-in-out;
+    box-shadow: 0 0 8px 2px white;
+    pointer-events: none;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.3); }
+  }
+
+  /* NAVBAR */
+  .navbar {
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+  .navbar button {
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 14px;
+    background-color: #f72885;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .navbar button:hover {
+    transform: scale(1.1);
+  }
+
+  h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ffcce1;
+    margin-top: 50px;
+  }
+
+  .section {
+    padding: 40px 20px;
+    min-height: 70vh;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+
+  .column img:hover {
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .cuteButton {
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: #f72885;
+    color: white;
+    font-family: "Lucida Handwriting", cursive;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+
+  .cuteButton:hover {
+    transform: scale(1.1);
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- Sparkles Script -->
+<script>
+  for (let i = 0; i < 40; i++) {
+    const sparkle = document.createElement("div");
+    sparkle.classList.add("sparkle");
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = Math.random() * 100 + "vh";
+    sparkle.style.animationDelay = Math.random() * 3 + "s";
+    sparkle.style.animationDuration = 2 + Math.random() * 3 + "s";
+    document.body.appendChild(sparkle);
+  }
+</script>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+  <button onclick="showSection('home')">HOME</button>
+  <button onclick="showSection('photo')">PHOTO BOOTH</button>
+  <button onclick="showSection('notes')">LOVE NOTES</button>
+  <button onclick="showSection('babi')">FOR BABI</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section">
+  <h1>HALO BABI 💕</h1>
+  <p style="color:white; font-size:22px;">
+    Happy Birthday 🥹<br><br>
+    I made this little website just for you.<br>
+    Please explore everything slowly.
+  </p>
+
+  <button class="cuteButton" onclick="alert('Luh sabing dont click eh, uto uto ka masyado!! BLEHHH')">
+    Don’t Click! 👀
+  </button>
+</div>
+
+<!-- PHOTO BOOTH -->
+<div id="photo" class="section" style="display:none;">
+  <h1>PLS MORE PHOTO BOOTH! 📸</h1>
+
+  <div class="container">
+    <div class="column">
+      <img src="BRED.jpeg">
+      <img src="RED.gif">
+    </div>
+    <div class="column">
+      <img src="BRED.gif">
+      <img src="RED.jpeg">
+    </div>
+  </div>
+</div>
+
+<!-- LOVE NOTES -->
+<div id="notes" class="section" style="display:none;">
+  <h1>WHY I LOVE YOU 💌</h1>
+
+  <p style="color:white; font-size:20px;">
+
+  1.	Everything about him is just so unique — he has me utterly captivated.<br><br>
+	2.	How he easily make me smile.<br><br>
+	3.	If im sad or upset, he will really show that he will be there for me — also cheers me up.<br><br>
+	4.	He shows how genuine and sincere his love with me.<br><br>
+	5.	Tiny gestures.<br><br>
+	6.	Takes care of me even when were long distanced.<br><br>
+	7.	Clinginess.<br><br>
+	8.	Straight priorities.<br><br>
+	9.	Checks up on me.<br><br>
+	10.	Fear to God.<br><br>
+	11.	Funny.<br><br>
+	12.	Very respectful.<br><br>
+	13.	Teases<br><br>
+	14.	His silly actings.<br><br>
+	15.	BAKAAAAA.<br><br>
+	16.	Bullying me in school.<br><br>
+	17.	Sudden romantic gestures.<br><br>
+	18.	His willingness.<br><br>
+	19.	Makes me feel confident.<br><br>
+	20.	Reassures me alot.<br><br>
+	21.	I can trust him alot, even if I tell the most dumbest secret — he would not judge and laugh it off w me.<br><br>
+	22.	Makes me feel so safe.<br><br>
+	23.	How he loves all my insecurities.<br><br>
+	24.	How he makes me feel like a princess.<br><br>
+	25.	I feel at ease being with him.<br><br>
+	26.	His warmth.<br><br>
+	27.	Hes never annoyed at me— even when I try to do the most diabolical shit ever... and questionable...<br><br>
+	28.	His lovely smile.<br><br>
+	29.	How he looks at me.<br><br>
+	30.	How he is not afraid to correct me.<br><br>
+	31.	How he brag or talk to his friends about me.<br><br>
+	32.	His hardwork<br><br>
+	33.	His hair.<br><br>
+	34.	His glasses.<br><br>
+	35.	His cheeks.<br><br>
+	36.	His lips.<br><br>
+	37.	His nose.<br><br>
+	38.	His eyes.<br><br>
+	39.	His eyebrows.<br><br>
+	40.	All in physical appearance, he is perfect and handsome and ADORABLE just the way I love it.<br><br>
+	41.	Family oriented.<br><br>
+	42.	How he tries his best to make me happy always.<br><br>
+	43.	Knows really well how to treat me right.<br><br>
+	44.	Keep his pinky promises.<br><br>
+	45.	Makes my life even more colorful, lively, exciting, romantic, ...<br><br>
+	46.	He has everything I want and need.<br><br>
+	47.	Letting me be part of his life... His future...<br><br>
+	48.	Makes me feel Important.<br><br>
+	49.	How patient he is with me.<br><br>
+	50.	Never fail to impress me or leave me flabbergasted— TO ANYTHING it can be random sht.<br><br>
+	51.	Calm.<br><br>
+	52.	Communicates with me thoroughly.<br><br>
+	53.	Reliable.<br><br>
+	54.	He never makes me feel little about myself.<br><br>
+	55.	He shows how committed he is with me.<br><br>
+	56.	He shows me how a man should treat a lady.<br><br>
+	57.	Listens to my yap.<br><br>
+	58.	He has that goofy and funny yet calm and relaxing character, which is unique for me.<br><br>
+	59.	How vulnerable he can be with me.<br><br>
+	60.	His baby side.<br><br>
+	61.	He never makes me feel insecure.<br><br>
+	62.	How he talks about wanting to love me at the fullest.<br><br>
+	63.	How he makes little plans or story scenarios for our future.<br><br>
+	64.	He knows when to be serious and goofy.<br><br>
+	65.	How he tampo.<br><br>
+	66.	His laugh and giggles.<br><br>
+	67.	When he removes his glasses...<br><br>
+	68.	His presence.<br><br>
+	69.	Helps me how to handle things.<br><br>
+	70.	How he says my name 'Angel'.<br><br>
+	71.	Takes me seriously.<br><br>
+	72.	Randomly spawning into my life, when i needed the most.<br><br>
+	73.	Bringing back my genuine self and smiles.<br><br>
+	74.	His style.<br><br>
+	75.	How he makes my inner child smile and giggle.<br><br>
+	76.	How he makes me feel that i would heal easily just by being with him, because of how patient and how he treats me right.<br><br>
+	77.	Plays with me.<br><br>
+	78.	Watches with me.<br><br>
+	79.	How I can just turn off my brain with him.<br><br>
+	80.	How he tries to protect me.<br><br>
+	81.	How he makes me feel seen.<br><br>
+	82.	HAHAHAHAHAHA sukuna<br><br>
+	83.	He is not afraid to be who he is, if he is then I will reassure him that just be yourself with me.<br><br>
+	84.	He tries his best to understand me.<br><br>
+	85.	I find peace just by seeing him and/or being with him.<br><br>
+	86.	He is there for everybody and helps everybody.<br><br>
+	87.	Very sweet.<br><br>
+	88.	His cute duck plushies.<br><br>
+	89.	Kind gorgeous and genuine soul.<br><br>
+	90.	Disciplined.<br><br>
+	91.	How happy and proud he is with me, with my tiniest achievements.<br><br>
+	92.	Never gives up.<br><br>
+	93.	How he gives me life scenarios to make me understand a problem.<br><br>
+	94.	How he love cats.<br><br>
+	95.	How he wanna randomly hold my hand.<br><br>
+	96.	How excited he is going out on a date.<br><br>
+	97.	How appreciative he is over little things.<br><br>
+	98.	His little glances— thinking I wouldn't notice or catch him.<br><br>
+	99.	How he makes me feel the prettiest girl.<br><br>
+	100.	There’s something about the way he makes me feel, like I can achieve the impossible — something the old me would have never dared to try.<br><br>
+	101.	Whenever (we) playing with friends, he still ask me to call and talk to me.<br><br>
+	102.	How he wants to be together with anything— like partner or groupmates in academic sht.<br><br>
+	103.	He is Independent.<br><br>
+	104.	How he motivates me.<br><br>
+	105.	Sweetest heart I have ever seen.<br><br>
+	106.	Everything seems so fun with him.<br><br>
+	107.	Strong.<br><br>
+	108.	Inspired me to be better and lively.<br><br>
+	109.	Loving me unconditionally.<br><br>
+	110.	Changes my point of view abt everything i find annoying before.<br><br>
+	111.	He tries to solve my silly problems.<br><br>
+	112.	Loyalty.<br><br>
+	113.	Always thinks about me.<br><br>
+	114.	Never betrays anyone.<br><br>
+	115.	Making normal or common actions feel more genuine and special.<br><br>
+	116.	he still tries to impress and give me butterflies even when were like together.<br><br>
+	117.	Support.<br><br>
+	118.	making me feel worthy.<br><br>
+	119.	When he calls me 'babiiii'.<br><br>
+	120.	Cute/baby voice.<br><br>
+	121.	Trying to act tough when he's actually a big baby.<br><br>
+	122.	Gentleman.<br><br>
+	123.	Adventurous <br><br>
+	124.	Sensitive and picks the right words<br><br>
+	125.	Always make my heart skip a beat in the most unexpected romantic moments.<br><br>
+	126.	Him kissing my forehead.<br><br>
+	127.	How he holds me when kissing.<br><br>
+	128.	How he makes me miss him...<br><br>
+	129.	The way how he do things perfectly and impressively in my eyes, No matter what the circumstances is.<br><br>
+  and on going...
+
+  </p>
+</div>
+
+<!-- FOR BABI -->
+<div id="babi" class="section" style="display:none;">
+  <h1>FOR BABI 🧸</h1>
+
+ <a href=love2.html><button class="cuteButton">PRESS ME!</button></a>
+
+</div>
+
+<!-- Section Switching -->
+<script>
+function showSection(sectionId) {
+  const sections = document.querySelectorAll(".section");
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
+  document.getElementById(sectionId).style.display = "block";
+}
+</script>
+
+</body>
+</html>

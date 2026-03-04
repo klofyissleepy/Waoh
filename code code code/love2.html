@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Babi</title>
+  <!-- My cute little Favicon -->
+  <link rel="icon" type="image/png" href="heart.jpeg">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #fbcdda, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ /* FIXED GRADIENT ANIMATION (Vertical Only) */
+  @keyframes dreamyGradient {
+    0% { background-position: 50% 0%; }
+    50% { background-position: 50% 100%; }
+    100% { background-position: 50% 0%; }
+  }
+
+  /* Sparkles */
+  .sparkle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 3s infinite ease-in-out;
+    box-shadow: 0 0 8px 2px white;
+    pointer-events: none;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.3); }
+  }
+/* Main Card */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Make audio player pink (works in Chrome, Edge, Opera) */
+audio {
+    width: 100%;
+    margin-bottom: 20px;
+    filter: hue-rotate(300deg) saturate(1.5);
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(247, 139, 170, 0.888);
+    transition: 0.3s;
+}
+
+/* Glow effect on hover */
+audio:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #ff8fc1f4;
+}
+
+/* Lyrics Box */
+.lyrics-box {
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 15px;
+    height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Scrollbar Style */
+.lyrics-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lyrics-box::-webkit-scrollbar-thumb {
+    background: rgb(255, 156, 190);
+    border-radius: 10px;
+}
+
+.cuteButton {
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: hsl(333, 100%, 63%);
+    color: white;
+    font-family: "Lucida Handwriting", cursive;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+
+  .cuteButton:hover {
+    transform: scale(1.1);
+  }
+</style>
+</head>
+
+<body>
+<!-- Sparkles Script -->
+<script>
+  
+  for (let i = 0; i < 40; i++) {
+    const sparkle = document.createElement("div");
+    sparkle.classList.add("sparkle");
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = Math.random() * 100 + "vh";
+    sparkle.style.animationDelay = Math.random() * 3 + "s";
+    sparkle.style.animationDuration = 2 + Math.random() * 3 + "s";
+    document.body.appendChild(sparkle);
+  }
+</script>
+<div class="container">
+    <h1>Isang "hi" 💌</h1>
+
+    <!-- 🎵 Music Player -->
+    <!-- Replace babi-song.mp3 with your actual file name -->
+    <audio controls>
+        <source src="woh.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- 📝 Lyrics Box -->
+    <div class="lyrics-box">
+
+DISCLAIMER:<br> Vocals made w AI,,,,,,<br> thats why theres some problems w the singing of the lyrics....BUT HEY YK NMN IM SICK AS HECK PLUS MY VOICE IS SHT.<br> ERM I had some AIs help but mostly done by me teehee. Hope you like it tho? been working on it for months🥹🥹🥹 Sorry if its not made w my own voice😔 HHHHHHHH I HAD TO GET SICK PA TLGA,,, k enough yapping, GET TO IT<br><br>
+
+---------------------------------------------------------------------------------------------------<br><br>
+       Verse 1 <br>
+Hindi ko naman balak
+na mapatingin sa’yo<br>
+Isang “hi” mo lang pala
+sira na ang plano ko<br>
+
+Tahimik lang sa umpisa,
+mga titig na nagtama<br>
+Parang may gustong sabihin
+pero parehong may kaba
+
+<br><br>Verse 2<br>
+’Di ko namalayan
+na ikaw na ang pahinga<br>
+Sa gitna ng magulong araw
+ikaw ang payapa<br>
+
+Sa simpleng kwentuhan
+oras ay dumudulas<br>
+Sa bawat mong ngiti
+puso ko’y nahuhulas
+
+<br><br>Pre-Chorus<br>
+At nung tayo'y umamin
+biglang nag-iba ang lahat<br>
+Sa dami ng plano ko,
+ikaw pala ang tapat
+
+<br><br>Chorus <br>
+Ikaw, ikaw<br>
+ang laging hinahanap<br>
+Ikaw, ikaw<br>
+ang pusong lumalapit<br>
+<br>
+Ikaw, ikaw<br>
+ang tahimik kong dahilan<br>
+Kung bakit gabi-gabi<br>
+ikaw ang laman ng isipan<br>
+
+Ikaw, ikaw<br>
+noon ay pangarap lang<br>
+Isang “hi” mo lang pala<br>
+simula na ng tayo —<br>
+hanggang walang hanggan
+
+<br><br>Outro <br>
+Sa dami ng plano ko
+ikaw ang pinili ng puso<br>
+Isang “hi” mo lang pala
+natagpuan ko ang “tayo”<br>
+    </div>
+     <a href=love1.html><button class="cuteButton">Done, love?</button></a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For my LOVE!</title>
+  <link rel="icon" type="image/png" href="heart.jpeg">
+<style>
+    * {
+  box-sizing: border-box;
+}
+  body {
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: "Lucida Handwriting", cursive;
+    background: linear-gradient(180deg, #fc5aa3, #ffa0be, #ffbadb);
+    background-size: 300% 300%;
+    animation: dreamyGradient 12s ease-in-out infinite;
+  }
+
+  @keyframes dreamyGradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+
+  .sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 3s infinite ease-in-out;
+    box-shadow: 0 0 8px 2px white;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.3); }
+  }
+
+  h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ffcce1;
+    margin-top: 100px;
+    animation: floatText 3s ease-in-out infinite;
+  }
+
+  @keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+.rounded {
+  border-radius: 8px;
+}
+
+input[type="password"] {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #f72885;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #d28bb9;
+  margin-top: 20px;
+}
+
+.button:active {
+  box-shadow: 0 5px #d28bb9;
+  transform: translateY(4px);
+}
+
+</style>
+</head>
+
+<body>
+<br>
+  <h1>Welcome!</h1>
+  <img src="kitty.jpg" alt="cat" width="200" height="200" class="rounded"><br><br>
+  <input type="password" id="password" placeholder="WHO IS THIS!?!?!"><br><br> 
+  <button class="button" onclick="checkPassword()">Enter</button>
+
+  <script>
+    
+    for (let i = 0; i < 30; i++) { 
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.top = Math.random() * 100 + "vh";
+      sparkle.style.animationDelay = Math.random() * 3 + "s";
+      sparkle.style.animationDuration = 2 + Math.random() * 3 + "s";
+      document.body.appendChild(sparkle);
+    }
+
+    function checkPassword() {
+      const password = document.getElementById("password").value; 
+      const correctPassword = "babi"; 
+
+      if (password === correctPassword) {
+        window.location.href = "love1.html";
+      } else {
+        alert("WHAT IS MY LOVE'S NICKNAME!?");
+      }
+    }
+  </script>
+</body>
+</html>
